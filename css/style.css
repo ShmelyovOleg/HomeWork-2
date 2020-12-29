@@ -27,10 +27,13 @@ body{
     padding: 40px;
 }
 .content-list li{
-    padding: 5px 0 5px 35px; 
-    background: url('../img/icons/check.png') no-repeat left;
     margin: 5px 0 0 0;
     color: #273d46;
+}
+.content-list li::before{
+    content:'';
+    background: url('../img/icons/check.png') no-repeat left; 
+    padding: 5px 0 5px 35px; 
 }
 .content-list-first li:nth-child(1) {
     text-decoration: line-through;
@@ -52,6 +55,8 @@ body{
 }
 .content-list-second li:nth-child(2):hover{
     color: red;
+}
+.content-list-second li:nth-child(2):hover::before{
     background: url('../img/icons/check_red.png') no-repeat left;
 }
 .content-button {
@@ -70,7 +75,8 @@ body{
     letter-spacing: 2.8px;
     padding: 0 30px;
 }
-.link span{
+.link span::after{
+    content: '';
     background: url('../img/icons/arrow.svg') no-repeat right;
     padding: 0 28px 0 0;
 }
@@ -91,4 +97,14 @@ body{
 
 .text-input:focus{
     box-shadow: 0 0 20px rgba(127, 190, 213, 0.93);
+}
+.text-content p{
+    margin: 50px 0 0 0;
+}
+.first-text::first-line{
+    color: red;
+}
+.second-text::first-letter{
+    color: red;
+    font-size: 30px;
 }
